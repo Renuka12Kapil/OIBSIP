@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>e-Shop | Online Store</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+body{
+    background:#f4f6f8;
+}
+
+/* Announcement Bar */
+.top-bar{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:8px;
+    font-size:14px;
+}
+
+/* Header */
+header{
+    background:#1E4A45;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+}
+header h1{
+    color:#ff9800;
+}
+nav a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+}
+nav a:hover{
+    color:#ff9800;
+}
+
+/* Hero */
+/* Hero Section */
+.hero{
+    background: #BFDCD7; /* exact image background */
+    color:#1F3D3A;
+    padding:100px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+}
+
+.hero-text{
+    max-width:50%;
+}
+
+.hero-text h2{
+    font-size:48px;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.hero-text p{
+    font-size:18px;
+    margin-bottom:35px;
+    opacity:0.9;
+}
+
+.hero-text a{
+    background:#1E4A45;
+    color:white;
+    padding:14px 34px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.hero-text a{
+    background:#1E4A45; 
+    color:white;
+}
+
+/* Hero Image */
+.hero-img img{
+    width:420px;
+    max-width:100%;
+    filter: drop-shadow(0 20px 25px rgba(0,0,0,0.25));
+}
+
+
+/* Categories */
+.categories{
+    background:#BFDCD7;
+    padding:60px;
+    text-align:center;
+}
+.categories h2{
+    margin-bottom:40px;
+}
+.category-box{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.category img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+.category:hover{
+    transform:translateY(-8px);
+}
+.category h3{
+    margin-top:15px;
+}
+
+/* Products */
+.products{
+    padding:60px;
+    background:#BFDCD7;;
+}
+.products h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+.product{
+    background:#f9f9f9;
+    padding:20px;
+    border-radius:10px;
+    position:relative;
+    transition:0.3s;
+}
+.product:hover{
+    transform:scale(1.03);
+}
+.badge{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:#1E4A45;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+}
+.product img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:8px;
+}
+.product h3{
+    margin:15px 0 10px;
+}
+.price{
+    color:#1E4A45;
+    font-weight:bold;
+}
+.product a{
+    display:inline-block;
+    margin-top:15px;
+    background:#1E4A45;
+    color:white;
+    padding:8px 20px;
+    border-radius:20px;
+    text-decoration:none;
+}
+.product a:hover{
+    background:#1E4A45;
+}
+
+/* Testimonials */
+.testimonials{
+    padding:60px;
+    background:#BFDCD7;;
+    text-align:center;
+}
+.testimonial-box{
+    display:flex;
+    gap:25px;
+    justify-content:center;
+}
+.testimonial{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    max-width:300px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Newsletter */
+.newsletter{
+    background:#BFDCD7;
+    color:#1E4A45;
+    padding:50px;
+    text-align:center;
+}
+.newsletter input{
+    padding:12px;
+    width:250px;
+    border:none;
+    border-radius:5px;
+}
+.newsletter button{
+    padding:12px 20px;
+    border:none;
+    background:#1E4A45;
+    color:white;
+    margin-left:10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+.newsletter button{
+    background:#1E4A45;
+}
+
+/* Footer */
+footer{
+    background:#000;
+    color:#ccc;
+    padding:20px;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+🔥 Mega Sale! Flat 50% Off on Selected Products
+</div>
+
+<header>
+    <h1><font color="white">e-Shop</font></h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Offers</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h2>Upgrade Your Style Today</h2>
+        <p>Latest fashion & electronics at unbeatable prices. Shop smart, live better.</p>
+        <a href="#">Start Shopping</a>
+    </div>
+
+    <div class="hero-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf8VzuZqF26v8aN-1yU6ciOMMcvufoeMZ9Kg&s" alt="Shopping">
+    </div>
+</section>
+
+
+<section class="categories">
+    <h2><font color="#1E4A45">Shop by Category</font></h2>
+    <div class="category-box">
+        <div class="category"><img src="https://cdn-icons-png.flaticon.com/512/5819/5819387.png"><h3>Electronics</h3></div>
+        <div class="category"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBiSoA9IAfPLPzz3OutLfXNwxcvoJN88U4Royoibo6MwuOxARj96U65bU&s"><h3>Wearable Technologies</h3></div>
+        <div class="category"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWYT-JkUwE9Sr0D3ikFrp0OuOjfY73woilGw&s"><h3>Tech Accessories</h3></div>
+        
+        <div class="category"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLDI0DR-VlKLQ_6FOG_KMJ-YF-_3CEDskTLw&s"><h3>AI-first</h3></div>
+    </div>
+</section>
+
+<section class="products">
+    <h2><font color="#1E4A45">Best Sellers</font></h2>
+    <div class="product-grid">
+        <div class="product">
+            <span class="badge">-30%</span>
+            <img src="https://mir-s3-cdn-cf.behance.net/projects/404/a4619b215077257.Y3JvcCwxMjQyLDk3MSwwLDgyMDg.jpg">
+            <h3>Smart Watch</h3>
+            <p class="price">₹6,999</p>
+            <a href="#">Add to Cart</a>
+        </div>
+        <div class="product">
+            <span class="badge">Hot</span>
+            <img src="https://elements-resized.envatousercontent.com/elements-cover-images/2f72e77d-eec0-4237-b8cb-5c9b00df3cd5?w=433&cf_fit=scale-down&q=85&format=auto&s=947af0dd91cb98d0feef6ab70171167d1bdee943e0607fdfeb62b4ce4b05c812">
+            <h3>Headphones</h3>
+            <p class="price">₹3,499</p>
+            <a href="#">Add to Cart</a>
+        </div>
+        <div class="product">
+            <span class="badge">New</span>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6CoYFjsQPPw6J7ThXBJJ9dHlS4OrM061Cpg&s">
+            <h3>Laptop</h3>
+            <p class="price">₹60,999</p>
+            <a href="#">Add to Cart</a>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2>What Our Customers Say</h2><br>
+    <div class="testimonial-box">
+        <div class="testimonial">
+            ⭐⭐⭐⭐⭐<br><br>
+            "Amazing quality and fast delivery!"
+        </div>
+        <div class="testimonial">
+            ⭐⭐⭐⭐☆<br><br>
+            "Affordable prices and stylish products."
+        </div>
+    </div>
+</section>
+
+<section class="newsletter">
+    <h2>Subscribe for Offers</h2><br>
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
+</section>
+
+<footer>
+    © 2026 e-Shop | Designed for Internship Task
+</footer>
+
+</body>
+</html>
